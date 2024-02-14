@@ -1,0 +1,78 @@
+._ticker {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    border-top: 1px solid $stroke;
+    border-bottom: 1px solid $stroke;
+
+    &._rotate {
+        transform: translate(-50%, 0) rotate(180deg);
+        border-bottom: 0;
+
+        ._ticker-text a {
+            transform: rotate(180deg);
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            .ticker-text {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+    // ._ticker-text
+
+    &-text {
+        display: flex;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 210px;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-right: 1px solid $stroke;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    .icon {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+
+            @media (max-width: 1024px) {
+                width: 200px;
+                height: 120px;
+            }
+
+            @media (max-width: 768px) {
+                width: 140px;
+            }
+
+            .icon {
+                width: 60%;
+
+                filter: grayscale(1);
+                transition: filter 0.3s ease 0s;
+
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
