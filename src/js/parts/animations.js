@@ -164,23 +164,30 @@ if (links.length && window.innerWidth > 1024) {
 
 
 function createScrollAnimation(params) {
-    const animation = gsap.to(params.elem, {
+    const scrollTrigger = {
+        trigger: params.elem,
+        start: params.top,
+        endTrigger: advelems[advelems.length - 1],
+        end: params.end,
+        scrub: !0,
+    }
+
+    gsap.to(params.elem, {
         scale: params.scale,
         rotateX: "-10deg",
         immediateRender: !0,
-        scrollTrigger: {
-            trigger: params.elem,
-            start: params.top,
-            endTrigger: advelems[advelems.length - 1],
-            end: params.end,
-            scrub: !0,
-        }
+        scrollTrigger: scrollTrigger
+    })
+
+    gsap.to(params.elem.querySelector('.advantages-item__bgc'), {
+        opacity: 0.7,
+        scrollTrigger: scrollTrigger
     })
 }
 
 const advelems = document.querySelectorAll('.advantages .grid-item');
 export const animateAdvantagesItems = () => {
-    if (advelems.length) {
+    if (advelems.length && window.innerWidth > 768) {
         createScrollAnimation({
             elem: advelems[0],
             scale: 0.8,

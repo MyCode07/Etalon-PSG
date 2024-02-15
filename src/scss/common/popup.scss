@@ -78,6 +78,10 @@
     &__container {
         max-width: 1066px;
 
+        @media (max-width: $containerWithPadding + px) {
+            max-width: 1066px;
+        }
+
         @media (max-width: 1024px) {
             max-width: 800px;
         }

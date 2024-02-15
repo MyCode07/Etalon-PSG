@@ -13,6 +13,14 @@
         padding: 50px 0 100px 0;
         margin-bottom: 0;
         background-color: $background;
+
+        @media (max-width: 1024px) {
+            padding: 40px 0 60px 0;
+        }
+
+        @media (max-width: 768px) {
+            padding: 25px 0 40px 0;
+        }
     }
 
     &:has(.section__bgi) {
@@ -45,6 +53,16 @@
                 rgba(0, 0, 0, 0.4);
 
             filter: blur(4px);
+
+            @media (max-width: 768px) {
+                background: linear-gradient(
+                        180deg,
+                        rgba(0, 0, 0, 0) 23.89%,
+                        rgba(0, 0, 0, 0.38) 39.74%,
+                        rgba(0, 0, 0, 0.56) 53.61%
+                    ),
+                    rgba(0, 0, 0, 0.5);
+            }
         }
 
         img,
@@ -220,16 +238,21 @@
 
 .advantages {
     .grid {
-        position: relative;
-        perspective: 900px;
+        @media (min-width: 769px) {
+            padding-bottom: 100px;
+            position: relative;
+            perspective: 900px;
+        }
 
         &-item {
-            position: sticky;
-            top: 60px;
+            @media (min-width: 769px) {
+                position: sticky;
+                top: 60px;
 
-            transform-origin: top;
+                transform-origin: top;
 
-            transform: translate(0, var(--adv-translate));
+                transform: translate(0, var(--adv-translate));
+            }
         }
     }
 }
@@ -344,6 +367,7 @@
 
     &-form {
         @media (min-width: 769px) {
+            min-height: 100%;
             border-radius: 10px;
             padding: 50px;
             background-color: $background;
@@ -491,10 +515,13 @@
     }
 
     .section__top {
-        margin-top: 305px;
         position: relative;
         z-index: 1;
         margin-bottom: 0;
+
+        @media (min-width: 1025px) {
+            @include adaptive-value("margin-top", 305, 161, 1);
+        }
 
         @media (max-width: 1024px) {
             margin-top: 161px;
@@ -522,10 +549,15 @@
         width: 100%;
         height: 100%;
 
+        picture,
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+
+            @media (max-width: 768px) {
+                object-position: 30%;
+            }
         }
     }
 }
