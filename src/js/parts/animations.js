@@ -122,3 +122,88 @@ export const animateStaggerAction = () => {
         observerStagger.observe(elem);
     })
 }
+
+
+
+
+const scroll = document.querySelectorAll('.programs-images__scroll');
+const links = document.querySelectorAll('.programs-list a');
+const defultImg = document.querySelector('.programs-images__img._default');
+let locked = false;
+
+if (links.length && window.innerWidth > 1024) {
+    const height = defultImg.getBoundingClientRect().height;
+
+    links.forEach((link, i) => {
+        link.addEventListener('mouseenter', () => {
+            locked = true
+            gsap.to(scroll, {
+                y: (i + 1) * -height,
+                duration: 0.7,
+            })
+        })
+
+        link.addEventListener('mouseleave', () => {
+            locked = false
+
+            setTimeout(() => {
+                if (locked == false) {
+                    gsap.to(scroll, {
+                        y: 0,
+                        duration: 1,
+                    })
+                }
+            }, 16);
+        })
+    })
+}
+
+
+
+
+
+
+function createScrollAnimation(params) {
+    const animation = gsap.to(params.elem, {
+        scale: params.scale,
+        rotateX: "-10deg",
+        immediateRender: !0,
+        scrollTrigger: {
+            trigger: params.elem,
+            start: params.top,
+            endTrigger: advelems[advelems.length - 1],
+            end: params.end,
+            scrub: !0,
+        }
+    })
+}
+
+const advelems = document.querySelectorAll('.advantages .grid-item');
+export const animateAdvantagesItems = () => {
+    if (advelems.length) {
+        createScrollAnimation({
+            elem: advelems[0],
+            scale: 0.8,
+            top: 'top 15%',
+            end: 'top 0%'
+        })
+        createScrollAnimation({
+            elem: advelems[1],
+            scale: 0.85,
+            top: 'top 20%',
+            end: 'top 0%'
+        })
+        createScrollAnimation({
+            elem: advelems[2],
+            scale: 0.9,
+            top: 'top 20%',
+            end: 'top 0%'
+        })
+        createScrollAnimation({
+            elem: advelems[3],
+            scale: 0.95,
+            top: 'top 20%',
+            end: '+=800'
+        })
+    }
+}

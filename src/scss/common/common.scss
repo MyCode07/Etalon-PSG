@@ -32,6 +32,12 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 769px) {
+        &._overlay {
+            filter: blur(100px);
+        }
+    }
 }
 
 main {
@@ -219,12 +225,22 @@ p {
             color: $white;
             background-color: $accent;
         }
+
+        ._arrow {
+            color: $white;
+            background-color: $accent;
+        }
     }
 
     // ._btn-accent-2
 
     &-accent-2 {
         span {
+            color: $white;
+            background-color: $accent-2;
+        }
+
+        ._arrow {
             color: $white;
             background-color: $accent-2;
         }
@@ -323,7 +339,7 @@ p {
         transition: transform 0.3s ease 0s;
 
         &:last-child {
-            transform: translate(-300%, 250%) rotate(-45deg);
+            transform: translate(-300%, -50%);
         }
     }
 
@@ -405,11 +421,24 @@ button {
                 img,
                 svg {
                     &:first-child {
-                        transform: translate(200%, -350%) rotate(-45deg);
+                        transform: translate(200%, -50%);
                     }
 
                     &:last-child {
-                        transform: translate(-50%, -50%) rotate(-45deg);
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                &-link {
+                    img,
+                    svg {
+                        &:first-child {
+                            transform: translate(200%, -350%) rotate(-45deg);
+                        }
+
+                        &:last-child {
+                            transform: translate(-50%, -50%) rotate(-45deg);
+                        }
                     }
                 }
             }

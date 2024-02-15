@@ -9,3 +9,25 @@ $white: #ffffff;
 $gray: #898989;
 $stroke: #dddddd;
 $background: #f5f5f5;
+$box-shadow:
+    -4px 4px 13px 0
+        rgba(
+            $color: $accent-2,
+            $alpha: 0.25
+        ),
+    -18px 15px 23px 0 rgba(
+            $color: $accent-2,
+            $alpha: 0.21
+        ),
+    -40px 34px 32px 0 rgba(
+            $color: $accent-2,
+            $alpha: 0.13
+        ),
+    -72px 60px 37px 0 rgba(
+            $color: $accent-2,
+            $alpha: 0.04
+        ),
+    -112px 93px 41px 0 rgba(
+            $color: $accent-2,
+            $alpha: 0
+        );

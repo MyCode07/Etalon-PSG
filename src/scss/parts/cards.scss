@@ -4,11 +4,12 @@
 
     border-radius: 10px;
 
-    transition: background-color 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 
     @media (any-hover: hover) {
         &:hover {
             background-color: $accent-2;
+            box-shadow: $box-shadow;
 
             h3 {
                 color: $white;
@@ -263,6 +264,7 @@
         &:hover {
             color: $white;
             background-color: $accent-2;
+            box-shadow: $box-shadow;
 
             span {
                 @media (min-width: 1025px) {
