@@ -212,6 +212,10 @@
                     width: calc(100% + 30px);
                 }
             }
+
+            h3 {
+                @include adaptive-value("font-size", 28, 18, 1);
+            }
         }
 
         &__row {
