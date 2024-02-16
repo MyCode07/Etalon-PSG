@@ -1,4 +1,4 @@
-const formHoverAll = document.querySelectorAll('.form-hover');
+const formHoverAll = document.querySelectorAll('form');
 
 if (formHoverAll.length) {
     formHoverAll.forEach(form => {

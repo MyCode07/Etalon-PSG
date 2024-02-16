@@ -120,24 +120,14 @@ p {
     text-transform: uppercase;
     font-weight: 400;
 
-    @media (min-width: 1025px) {
-        @include adaptive-value("font-size", 40, 20, 1);
-    }
-
-    @media (max-width: 1024px) {
-        font-size: 26px;
-    }
-
-    @media (max-width: 768px) {
-        font-size: 20px;
-    }
+    @include adaptive-value("font-size", 32, 20, 1);
 }
 
 ._large-text-medium {
     font-weight: 500;
     line-height: 1.2;
-    letter-spacing: -0.05em;
-    @include adaptive-value("font-size", 40, 20, 1);
+    letter-spacing: -0.02em;
+    @include adaptive-value("font-size", 36, 20, 1);
 }
 
 ._big-text {
@@ -150,7 +140,7 @@ p {
     line-height: 1;
     text-transform: uppercase;
 
-    @include adaptive-value("font-size", 100, 36, 1);
+    @include adaptive-value("font-size", 80, 36, 1);
 }
 
 ._btn {

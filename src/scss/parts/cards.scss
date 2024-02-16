@@ -74,13 +74,13 @@
 
 .advantages-item {
     background-color: $white;
-    padding: 65px 0;
+    padding: 50px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
 
     @media (max-width: 1024px) {
-        padding: 30px 0;
+        padding: 30px;
     }
 
     @media (max-width: 768px) {
@@ -93,14 +93,14 @@
         padding-bottom: 20px;
         border-bottom: 1px solid $stroke;
 
-        margin-bottom: 85px;
+        margin-bottom: 70px;
 
         @media (min-width: 1025px) {
-            @include adaptive-value("padding-left", 100, 0, 1);
+            // @include adaptive-value("padding-left", 100, 0, 1);
         }
 
         @media (max-width: 1024px) and (min-width: 769px) {
-            padding-left: 40px;
+            // padding-left: 40px;
         }
 
         @media (max-width: 1024px) {
@@ -112,47 +112,49 @@
         }
     }
 
-    .section {
-        &__flex {
-            @media (max-width: 1204px) and (min-width: 769px) {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-            }
+    .section__flex {
+        @media (min-width: 769px) {
+            display: grid;
+            gap: 50px;
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-            @media (max-width: 768px) {
-                display: flex;
-                flex-direction: column-reverse;
-                gap: 20px;
-                flex: 1 1 auto;
-            }
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 20px;
+            flex: 1 1 auto;
+        }
 
-            &-left {
-                @media (min-width: 1025px) {
-                    @include adaptive-value("padding-left", 100, 0, 1);
-                }
+        &-left {
+            max-width: none;
+            // @media (min-width: 1025px) {
+            //     @include adaptive-value("padding-left", 100, 0, 1);
+            // }
 
-                @media (max-width: 1024px) and (min-width: 769px) {
-                    padding-left: 40px;
-                }
-            }
+            // @media (max-width: 1024px) and (min-width: 769px) {
+            //     padding-left: 40px;
+            // }
+        }
 
-            &-right {
-                @media (min-width: 1025px) {
-                    @include adaptive-value("padding-right", 100, 0, 1);
-                }
+        &-right {
+            max-width: none;
 
-                @media (max-width: 1024px) and (min-width: 769px) {
-                    padding-right: 40px;
-                }
+            // @media (min-width: 1025px) {
+            //     @include adaptive-value("padding-right", 100, 0, 1);
+            // }
 
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
+            // @media (max-width: 1024px) and (min-width: 769px) {
+            //     padding-right: 40px;
+            // }
 
-                p {
-                    max-width: 615px;
-                    @include adaptive-value("font-size", 28, 14, 1);
-                }
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            p {
+                max-width: 615px;
+                @include adaptive-value("font-size", 28, 14, 1);
             }
         }
     }
@@ -184,7 +186,7 @@
 .license-item {
     border-radius: 10px;
     border: 1px solid currentColor;
-    padding: 25px 30px;
+    padding: 30px;
 
     display: flex;
     flex-direction: column;
@@ -199,15 +201,13 @@
     }
 
     h5 {
-        margin-bottom: 36px;
         flex: 1 1 auto;
 
-        @media (max-width: 1024px) {
-            margin-bottom: 52px;
-        }
+        margin-bottom: 40px;
+        font-weight: 500;
+        @include adaptive-value("font-size", 24, 16, 1);
 
         @media (max-width: 768px) {
-            margin-bottom: 40px;
             font-weight: 400;
         }
     }
@@ -317,8 +317,8 @@
     overflow: hidden;
     position: relative;
     color: $white;
-    padding: 30px;
-    height: 600px;
+    padding: 25px;
+    height: 500px;
 
     display: flex;
     flex-direction: column;
@@ -365,6 +365,10 @@
         position: relative;
         z-index: 1;
         pointer-events: none;
+    }
+
+    h3 {
+        @include adaptive-value("font-size", 30, 20, 1);
     }
 
     label {

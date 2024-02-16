@@ -1,3 +1,4 @@
+import "./parts/input-hover.js";
 import "./parts/popup.js";
 import "./static/ticker.js";
 import { maskInputs } from "./static/inputmask.js";
