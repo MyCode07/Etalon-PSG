@@ -386,6 +386,10 @@ p {
             border-color: $accent;
             padding: 10px 10px 10px 30px;
 
+            * {
+                color: $white;
+            }
+
             &:after {
                 max-width: 0;
             }

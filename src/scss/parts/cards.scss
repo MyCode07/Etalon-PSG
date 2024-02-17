@@ -162,11 +162,6 @@
     // .advantages-item__img
 
     &__img {
-        @media (max-width: 1024px) and (min-width: 769px) {
-            max-width: 400px;
-            margin-right: 20px;
-        }
-
         img {
             border-radius: 10px;
         }
@@ -279,6 +274,10 @@
             background-color: $accent-2;
             box-shadow: $box-shadow;
 
+            * {
+                color: $white;
+            }
+
             span {
                 @media (min-width: 1025px) {
                     transform: translate(0, -8px);
@@ -369,6 +368,7 @@
 
     h3 {
         @include adaptive-value("font-size", 30, 20, 1);
+        color: $white;
     }
 
     label {

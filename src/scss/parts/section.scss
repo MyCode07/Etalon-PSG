@@ -9,6 +9,23 @@
         margin-bottom: 60px;
     }
 
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ol,
+    ul,
+    li,
+    a {
+        color: $text;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
     &._bgc {
         padding: 100px 0;
         margin-bottom: 0;
@@ -31,6 +48,19 @@
     &:has(.section__bgi) {
         position: relative;
         overflow: hidden;
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ol,
+        ul,
+        li,
+        a {
+            color: $white;
+        }
     }
 
     // .section__bgi
@@ -98,6 +128,10 @@
 
         @media (max-width: 1024px) {
             margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-bottom: 0;
         }
 
         &._row {
@@ -354,6 +388,7 @@
         ._big-text {
             margin-bottom: 48px;
             flex: 1 1 auto;
+            color: $white;
 
             @media (max-width: 768px) {
                 margin-bottom: 40px;
@@ -361,6 +396,8 @@
         }
 
         p {
+            color: $white;
+
             @media (max-width: 768px) {
                 margin-bottom: 40px;
                 padding-bottom: 40px;
@@ -504,6 +541,11 @@
 }
 
 .contact-us {
+    h2,
+    p {
+        color: $white;
+    }
+
     .section__body {
         position: relative;
         border-radius: 10px;

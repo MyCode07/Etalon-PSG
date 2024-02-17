@@ -1,0 +1,71 @@
+.new-page-wrapper {
+    color: $text;
+
+    .wrapper {
+        display: block;
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        & > :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .education-item {
+        h4 {
+            line-height: 1;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    ._link h3 {
+        margin-bottom: 0;
+    }
+
+    .popup {
+        z-index: 10000;
+
+        .form__top h3 {
+            color: $text;
+            margin-bottom: 0;
+        }
+    }
+
+    ._btn label {
+        margin-bottom: 0;
+    }
+
+    .programs {
+        margin-top: 100px;
+
+        @media (max-width: 768px) {
+            margin-top: 80px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .form__img {
+            display: block;
+        }
+    }
+
+    .partnership-item h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .clients-text ._big-text {
+        margin-bottom: 0;
+    }
+
+    .blog-item div h3 {
+        margin-bottom: 0;
+    }
+}

@@ -14,7 +14,7 @@
         transform: translate(-50%, 0) rotate(180deg);
         border-bottom: 0;
 
-        ._ticker-text a {
+        ._ticker-text ._ticker-item {
             transform: rotate(180deg);
         }
     }
@@ -31,48 +31,50 @@
 
     &-text {
         display: flex;
+    }
 
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 240px;
-            height: 160px;
-            overflow: hidden;
+    // ._ticker-item
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 240px;
+        height: 160px;
+        overflow: hidden;
 
-            border-right: 1px solid $stroke;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-            @media (any-hover: hover) {
-                &:hover {
-                    .icon {
-                        filter: grayscale(0);
-                    }
+        border-right: 1px solid $stroke;
+
+        @media (any-hover: hover) {
+            &:hover {
+                .icon {
+                    filter: grayscale(0);
                 }
             }
+        }
 
-            @media (max-width: 1024px) {
-                width: 180px;
-                height: 120px;
-            }
+        @media (max-width: 1024px) {
+            width: 180px;
+            height: 120px;
+        }
 
-            @media (max-width: 768px) {
-                width: 140px;
-                height: 90px;
-            }
+        @media (max-width: 768px) {
+            width: 140px;
+            height: 90px;
+        }
 
-            .icon {
-                width: 60%;
+        .icon {
+            width: 60%;
 
-                filter: grayscale(1);
-                transition: filter 0.3s ease 0s;
+            filter: grayscale(1);
+            transition: filter 0.3s ease 0s;
 
-                img {
-                    object-fit: contain;
-                }
+            img {
+                object-fit: contain;
             }
         }
     }
