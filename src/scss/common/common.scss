@@ -272,6 +272,20 @@ p {
             border-color: currentColor;
         }
     }
+
+    // ._btn-black-border
+
+    &-black-border {
+        color: $text;
+
+        span {
+            border: 1px solid currentColor;
+        }
+
+        ._arrow {
+            border-color: currentColor;
+        }
+    }
 }
 
 ._arrow {

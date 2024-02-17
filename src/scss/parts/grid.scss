@@ -40,6 +40,18 @@
             min-height: 100%;
         }
     }
+
+    & + ._btn {
+        margin-top: 50px;
+
+        @media (max-width: 1024px) {
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 25px;
+        }
+    }
 }
 
 .scroll-wrapper {
@@ -67,6 +79,18 @@
             & > :not(:last-child) {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    & + ._btn {
+        margin-top: 50px;
+
+        @media (max-width: 1024px) {
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 25px;
         }
     }
 }
