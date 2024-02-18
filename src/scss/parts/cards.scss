@@ -163,6 +163,8 @@
 
     &__img {
         img {
+            max-height: 365px;
+            object-fit: contain;
             border-radius: 10px;
         }
     }
