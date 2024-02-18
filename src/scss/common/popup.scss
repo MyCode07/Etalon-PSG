@@ -1,4 +1,4 @@
-.popup {
+._popup {
     position: fixed;
     left: 0;
     top: 0;
@@ -73,7 +73,7 @@
         padding: 100px 0;
     }
 
-    // .popup__container
+    // ._popup__container
 
     &__container {
         max-width: 1066px;
@@ -92,7 +92,7 @@
         }
     }
 
-    // .popup__close
+    // ._popup__close
 
     &__close {
         transform: translate(35px, -35px);

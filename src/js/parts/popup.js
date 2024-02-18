@@ -8,7 +8,7 @@ document.addEventListener('click', function (e) {
     if (targetEl.hasAttribute('data-open-popup')) {
         e.preventDefault();
         const id = targetEl.getAttribute('data-id');
-        const popup = document.querySelector(`.popup#${id}`);
+        const popup = document.querySelector(`._popup#${id}`);
 
         if (popup) {
             popup.classList.add('_open')
@@ -20,7 +20,7 @@ document.addEventListener('click', function (e) {
         }
     }
 
-    if (targetEl.classList.contains('popup')) {
+    if (targetEl.classList.contains('_popup')) {
         targetEl.classList.remove('_open')
         wrapper.classList.remove('_overlay')
 
@@ -29,8 +29,8 @@ document.addEventListener('click', function (e) {
         }
     }
 
-    if (targetEl.classList.contains('popup__close') || targetEl.hasAttribute('data-close-popup')) {
-        const popup = targetEl.closest('.popup');
+    if (targetEl.classList.contains('_popup__close') || targetEl.hasAttribute('data-close-popup')) {
+        const popup = targetEl.closest('._popup');
         popup.classList.remove('_open');
         wrapper.classList.remove('_overlay')
 
