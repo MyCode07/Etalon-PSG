@@ -2,6 +2,8 @@ import { isMobile } from "../utils/isMobile.js";
 import { lockPadding, unLockPadding } from "../utils/lockPadding.js";
 
 const wrapper = document.querySelector('.wrapper');
+const partnershipPopup = document.querySelector('._popup#partnership');
+
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
 
@@ -14,29 +16,30 @@ document.addEventListener('click', function (e) {
             popup.classList.add('_open')
             wrapper.classList.add('_overlay')
 
-            if (!isMobile.any()) {
-                lockPadding();
-            }
+            lockPadding();
         }
     }
 
     if (targetEl.classList.contains('_popup')) {
         targetEl.classList.remove('_open')
-        wrapper.classList.remove('_overlay')
-
-        if (!isMobile.any()) {
-            unLockPadding();
-        }
+        closePopup(targetEl)
     }
 
     if (targetEl.classList.contains('_popup__close') || targetEl.hasAttribute('data-close-popup')) {
         const popup = targetEl.closest('._popup');
-        popup.classList.remove('_open');
-        wrapper.classList.remove('_overlay')
-
-
-        if (!isMobile.any()) {
-            unLockPadding();
-        }
+        closePopup(popup)
     }
 })
+
+
+function closePopup(popup) {
+    popup.classList.remove('_open')
+
+    if (popup.id != partnershipPopup.id && partnershipPopup.classList.contains('_open')) {
+        //
+    }
+    else {
+        wrapper.classList.remove('_overlay')
+        unLockPadding();
+    }
+}

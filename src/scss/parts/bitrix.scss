@@ -32,9 +32,24 @@
     ._popup {
         z-index: 10000;
 
-        .form__top h3 {
+        h3,
+        h2 {
             color: $text;
             margin-bottom: 0;
+        }
+
+        &__text {
+            h2 {
+                margin-top: 0;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        &#error h2 {
+            color: $accent;
         }
     }
 

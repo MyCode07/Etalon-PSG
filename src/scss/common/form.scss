@@ -70,6 +70,18 @@
                 height: 80px;
             }
         }
+
+        &._error {
+            input,
+            textarea {
+                box-shadow: 0px 0px 0px 1px rgba($color: $accent-2, $alpha: 1);
+                color: $accent;
+
+                &::placeholder {
+                    color: $accent;
+                }
+            }
+        }
     }
 
     // .form__bottom
@@ -116,4 +128,8 @@
             background-color: $background;
         }
     }
+}
+
+form._sending {
+    pointer-events: none;
 }
